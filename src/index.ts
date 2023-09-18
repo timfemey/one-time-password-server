@@ -3,10 +3,14 @@ dotenv.config();
 import express from "hyper-express";
 import helmet from "helmet";
 import cluster from "cluster";
+import { totp } from "otplib";
 import { cpus } from "os";
 import { IncomingMessage, ServerResponse } from "node:http";
 import { sendOTP } from "./routes/sendOTP.js";
 import { verifyOTP } from "./routes/verifyOTP.js";
+
+//Time Based OTP Config
+totp.options = { digits: 6, step: 300 };
 
 const totalCPU = cpus().length;
 
