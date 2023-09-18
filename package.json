@@ -1,0 +1,24 @@
+{
+  "name": "one-time-password-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Server for Managing OTP SMS using AWS SMS API",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node ./dist/index.js"
+  },
+  "keywords": [
+    "sms",
+    "aws",
+    "node"
+  ],
+  "author": "Ishola Obafemi",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1459.0",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.0.0",
+    "hyper-express": "^6.8.5",
+    "otplib": "^12.0.1"
+  }
+}
