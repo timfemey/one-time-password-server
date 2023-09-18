@@ -18,7 +18,7 @@ async function sendOTP(req: Request, res: Response) {
     phoneNo,
     `Verify your Phone Number using this One Time Password ${otp}. **Valid for 5mins**`
   )
-  return res.status(200).json({message:`OTP sent Successfully`,status:false})
+  return res.status(200).json({message:`OTP sent Successfully`,status:true})
 }
 
 export { sendOTP };
